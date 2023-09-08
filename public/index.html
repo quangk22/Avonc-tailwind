@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>AVONE</title>
     <link rel="stylesheet" href="../public/css/output.css">
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <style>
@@ -16,546 +16,670 @@
 </head>
 
 <body>
-    
-    <header class="fixed top-0 z-10 bg-white w-full shadow-md">
-        <div class="flex  justify-between max-w-[1200px] m-auto  py-2 ">
-            <div class="logo flex font-bold text-3xl items-center">
-                <a href="index.html">AVONE</a>
+    <div class="relative max-h-full top-0 h ">
+        <!-- search -->
+        <div class="w-full h-[212px] fixed bg-white z-50 hidden   -translate-y-[100%] " id="searchContainer">
+            <div class="flex justify-end mr-5 mt-2 ">
+                <button id="close" class="text-xs text-[#9ca3af]">
+                    <i class="fa-solid fa-x"></i>
+                </button>
             </div>
-            <div class="menu flex items-center text-center">
-                <ul class="flex text-sm font-normal ">
-                    <li class="mr-5 p-3  hover:text-[#f57480] "><a href="">Home</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Shop</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Features</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">New in</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">LookBook</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Pages</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Blog</a></li>
-                    <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Buy Now!</a></li>
+            <div class="px-10 py-3">
+                <p class="h4"><b>What are you looking for?</b></p>
+                <form action="" class="flex w-full relative py-3">
+                    <input type="text" placeholder="Search for products, brands and more"
+                        class="w-full p-2 outline-0 border-b">
+                    <div class="absolute right-0 text-[#9ca3af]"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </form>
+                <p class="">
+                <ul class="flex">
+                    <li class="mr-3 ">Popular Searches: </li>
+                    <li class="mr-3 underline decoration-1">Jeans</li>
+                    <li class="mr-3 underline decoration-1">Dress</li>
+                    <li class="mr-3 underline decoration-1">Top</li>
+                    <li class="mr-3 underline decoration-1">summer</li>
                 </ul>
+                </p>
             </div>
-            <div class="icon flex items-center text-center text-2xl">
-                <i class='bx bx-search mr-4 cursor-pointer'></i>
-                <i class='bx bx-user   mr-4 cursor-pointer'></i>
-                <i class='bx bx-heart mr-4  cursor-pointer relative'><div class="absolute w-[15px] h-[15px] rounded-full top-[-10px] right-[-10px] text-[11px] bg-black flex items-center justify-center text-white">0</div></i>
-                <i class='bx bx-shopping-bag mr-4 cursor-pointer relative'><div class="absolute w-[15px] h-[15px] rounded-full top-[-10px] right-[-10px] text-[11px] bg-black flex items-center justify-center text-white ">0</div></i>
+            <div class="h-[100vh] bg-gray-950 bg-opacity-50" id="overlay"></div>
+        </div>
+        <!-- cart -->
+        <div class=" max-w-full fixed right-0 z-50  hidden  " id="cardContainer">
+            <div class="flex">
+                <div class=" w-[75vw] h-[100vh] bg-gray-950 bg-opacity-50" id="overlayCart"></div>
+                <div class="w-[25vw] h-[100vh] bg-white">
+                    <div class="flex justify-between p-5 ">
+                        <h4 class="font-bold">YOUR CART (0)</h4>
+                        <button id="closeCart" class="text-xs ">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+
+                    <div class="block justify-center items-center text-center p-10">
+                        <p class="text-4xl" ><i class='bx bx-shopping-bag'></i></p>
+                        <p class="py-5">You don't have any items in your cart.</p>
+                        <div class=" font-bold uppercase text-xs text-white "><a href=""
+                                class="bg-[#000] py-2 px-20">Continue shopping</a></div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- main -->
+        <div class="container-full ">
+            <header>
+                <div class="fixed top-0 z-10 bg-white w-full shadow-md">
+                    <div class="flex  justify-between max-w-[1200px] m-auto  py-2 ">
+                        <div class="logo flex font-bold text-3xl items-center">
+                            <a href="index.html">AVONE</a>
+                        </div>
+                        <div class="menu flex items-center text-center">
+                            <ul class="flex text-sm font-normal uppercase ">
+                                <li class="mr-5 p-3  hover:text-[#f57480] "><a href="">Home</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Shop</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Features</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">New in</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">LookBook</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Pages</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Blog</a></li>
+                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Buy Now!</a></li>
+                            </ul>
+                        </div>
+                        <div class="icon flex items-center text-center text-2xl">
+                            <button id="showSearchButton"><i class='bx bx-search mr-4 cursor-pointer'></i></button>
+                            <button id="showUser" class="relative">
+                                <i class='bx bx-user   mr-4 cursor-pointer'>
+                                    <div class="absolute -right-[70px] top-11 w-[300px] bg-white text-xs border p-5 hidden transition-all delay-550 duration-500 ease-in"
+                                        id="User">
+                                        <div class="flex justify-center text-center items-center mb-5">
+                                            <p class=" text-white  py-1 font-bold text-sm  w-[250px] bg-[#000] "><a
+                                                    href="#">LOGIN</a></p>
+                                        </div>
+                                        <div class="flex justify-center text-center items-center text-sm">
+                                            <span class="mr-1">New User? </span>
+                                            <span>Register Now</span>
+                                        </div>
 
+                                        <div class="px-4">
+                                            <div class="flex justify-start ml-3 py-4 font-bold">CURRECNY</div>
+                                            <form action="">
+                                                <ul class="grid grid-cols-4 gap-1">
+                                                    <li class="border p-1">AUD $</li>
+                                                    <li class="border p-1">EUR €</li>
+                                                    <li class="border p-1">GBP £</li>
+                                                    <li class="border p-1">INR ₹</li>
+                                                    <li class="border p-1">USD $</li>
+                                                    <li class="border p-1">CAD $</li>
+                                                </ul>
+                                            </form>
+                                        </div>
 
-    </header>
-    <!-- header -->
-    <header>
-        <section>
-            <div class="  relative">
-                <div class="banner w-full ">
-                    <div class="img-banner w-full  h-full "><img src="./media/baner1.png" alt=""></div>
-                    <div class="text-item absolute top-[30%] left-[5%]">
-
-                        <p class="flex text-center justify-center leading-[19.2px] text-base font-normal">START A
-                            FREE TRIAL
-                            AND ENJOY</p>
-                        <h2 class="flex text-center justify-center text-[47px] mb-[25px] font-bold">
-                            <b class="inline  tracking-[0.94px] leading-[51.7px]">
-                                3 months of Shopify
-                                <br>
-                                for $1/month
-                            </b>
-                        </h2>
-                        <p class="flex text-center justify-center  mb-[25px]">Creative, Flexible and High
-                            Performance
-                            shopify theme!</p>
-
-                        <span
-                            class=" flex text-center justify-center ml-[9.5rem]  border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-4 py-3 max-w-[150px]  ">Shop
-                            now</span>
+                                        <div class="px-4">
+                                            <div class="flex justify-start ml-3 py-4 font-bold">LANGUAGE</div>
+                                            <ul class="grid grid-cols-4 gap-1">
+                                                <li class="border p-1">English</li>
+                                                <li class="border p-1">Deutsch</li>
+                                                <li class="border p-1">Français</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </i>
+                            </button>
+                            <i class='bx bx-heart mr-4  cursor-pointer relative'>
+                                <div
+                                    class="absolute w-[15px] h-[15px] rounded-full top-[-10px] right-[-10px] text-[11px] bg-black flex items-center justify-center text-white">
+                                    0</div>
+                            </i>
+                            <button id="showCart">
+                                <i class='bx bx-shopping-bag mr-4 cursor-pointer relative' >
+                                    <div
+                                        class="absolute w-[15px] h-[15px] rounded-full top-[-10px] right-[-10px] text-[11px] bg-black flex items-center justify-center text-white ">
+                                        0</div>
+                                </i>
+                            </button>
+                        </div>
                     </div>
+
                 </div>
+            </header>
+            <div class="banner">
+                <section>
+                    <div class="  relative">
+                        <div class="banner w-full ">
+                            <div class="img-banner w-full  h-full "><img src="./media/baner1.png" alt=""></div>
+                            <div class="text-item absolute top-[30%] left-[5%]">
+
+                                <p class="flex text-center justify-center leading-[19.2px] text-base font-normal">START
+                                    A
+                                    FREE TRIAL
+                                    AND ENJOY</p>
+                                <h2 class="flex text-center justify-center text-[47px] mb-[25px] font-bold">
+                                    <b class="inline  tracking-[0.94px] leading-[51.7px]">
+                                        3 months of Shopify
+                                        <br>
+                                        for $1/month
+                                    </b>
+                                </h2>
+                                <p class="flex text-center justify-center  mb-[25px]">Creative, Flexible and High
+                                    Performance
+                                    shopify theme!</p>
+
+                                <span
+                                    class=" flex text-center justify-center ml-[9.5rem]  border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-4 py-3 max-w-[150px]  ">Shop
+                                    now</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-    </header>
-
-    <main class="mt-[60px] ">
+            <main class="mt-[60px] ">
 
 
-        <section class=" mt-5 max-w-[1200px] m-auto ">
-            <div class="grid gap-5 grid-cols-2 " style="grid-template-rows: 1fr 189px 1fr;">
-                <div class="img-item1  relative row-span-2 group">
-                    <div class=" bg-cover overflow-hidden  "> <img src="media/womens-top_770x.png" alt=""
-                            class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
-                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base">
-                        <div class="details block items-center text-center justify-center bg-white p-5 ">
-                            <h3 class="flex items-center text-center justify-center font-bold leading-3 text-base">
-                                WOMEN TOPS
-                            </h3>
-                            <p class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]">
-                                From world's
-                                top designer </p>
-                            <button
-                                class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
-                                type="button">DISCOVER NOW</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 1 -->
-                <div class="img-item2  relative group">
-                    <div class="bg-cover overflow-hidden  "> <img src="media/men-clothing_770x.png" alt=""
-                            class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
-                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base">
-                        <div class="details block items-center text-center justify-center bg-white p-5">
-                            <h3 class="flex items-center text-center justify-center font-bold leading-3 text-base"> MEN
-                                SHIRTS
-                            </h3>
-                            <p class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]"> Up
-                                to 70% off on selected item </p>
-                            <button
-                                class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
-                                type="button">DISCOVER NOW</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 2 -->
-                <div class="img-item3  relative group">
-                    <div class=" bg-cover overflow-hidden "> <img src="media/denim.png" alt=""
-                            class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
-
-                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[45%] text-base inset-[454px]">
-                        <div class="details block items-center text-center justify-center bg-white p-5 ">
-                            <h3 class="flex items-center text-center justify-center font-bold leading-3 text-base">
-                                DENIM
-                            </h3>
-                            <p class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]">
-                                Find your perfect outfit </p>
-                            <button
-                                class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
-                                type="button">Shop Now</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 3 -->
-                <div class="img-item4  relative row-span-2 group">
-                    <div class="bg-cover overflow-hidden  "> <img src="media/accesories_770x.png" alt=""
-                            class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
-                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%]">
-                        <div class="details block items-center text-center justify-center bg-white p-5 ">
-                            <h3 class="flex items-center text-center justify-center font-bold leading-3 text-base">
-                                ACCESSORIES
-                            </h3>
-                            <p class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]"> add
-                                finishing touch to your outfit </p>
-                            <button
-                                class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
-                                type="button">Shop Now</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4 -->
-            </div>
-        </section>
-        <section class="mt-12 max-w-[1200px] m-auto ">
-            <div class="flex text-center justify-center items-center mb-16">
-                <div class="">
-                    <h2 class="font-bold text-2xl"><b>NEW ARRIVALS</b></h2>
-                    <p>Shop our new arrivals from established brands</p>
-                </div>
-            </div>
-            <div class="list grid grid-cols-4 gap-5  ">
-                <div class="card group">
-                    <div class="img1 relative -z-30 overflow-hidden">
-                        <img src="./media/8_450x.png" alt="" class="h-[400px]">
-                        <div
-                            class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                            <div class="flex">
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                    <i class='bx bx-heart   '></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-search-alt-2'></i>
+                <section class=" mt-5 max-w-[1200px] m-auto ">
+                    <div class="grid gap-5 grid-cols-2 " style="grid-template-rows: 1fr 189px 1fr;">
+                        <div class="img-item1  relative row-span-2 group">
+                            <div class=" bg-cover overflow-hidden  "> <img src="media/womens-top_770x.png" alt=""
+                                    class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
+                            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base">
+                                <div class="details block items-center text-center justify-center bg-white p-5 ">
+                                    <h3
+                                        class="flex items-center text-center justify-center font-bold leading-3 text-base">
+                                        WOMEN TOPS
+                                    </h3>
+                                    <p
+                                        class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]">
+                                        From world's
+                                        top designer </p>
+                                    <button
+                                        class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
+                                        type="button">DISCOVER NOW</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex justify-center text-center">
-                        <div class="block ">
-                            <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Innerbloom Puffer
-                                    Jacket</a></div>
-                            <div class="flex justify-center">
-                                <s class="mr-1 font-normal opacity-60">$1,178.00</s>
-                                <span class="text-sm text-red-400">$761.00</span>
-                            </div>
-                            <div class="icon text-[#ffbe00]">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star-half'></i>
-                            </div>
-                            <div class="">
-                                <ul class="flex text-center justify-center">
-                                    <li
-                                        class="bg-red-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                    <li
-                                        class="bg-blue-600 rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                    <li
-                                        class="bg-black    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- 2 -->
-                <div class="card group">
-                    <div class="img relative -z-30 overflow-hidden">
-                        <img src="./media/23_400x.jpg" alt="" class="h-[400px]">
-                        <div
-                            class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                            <div class="flex">
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                    <i class='bx bx-heart   '></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-search-alt-2'></i>
+                        <!-- 1 -->
+                        <div class="img-item2  relative group">
+                            <div class="bg-cover overflow-hidden  "> <img src="media/men-clothing_770x.png" alt=""
+                                    class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
+                            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base">
+                                <div class="details block items-center text-center justify-center bg-white p-5">
+                                    <h3
+                                        class="flex items-center text-center justify-center font-bold leading-3 text-base">
+                                        MEN
+                                        SHIRTS
+                                    </h3>
+                                    <p
+                                        class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]">
+                                        Up
+                                        to 70% off on selected item </p>
+                                    <button
+                                        class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
+                                        type="button">DISCOVER NOW</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex justify-center text-center ">
-                        <div class="block ">
-                            <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Martha Knit
-                                    Top</a></div>
-                            <div class="flex justify-center">
-                                <span class="font-normal"> $471.00</span>
-                            </div>
-                            <div class="icon text-[#ffbe00]">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star-half'></i>
-                            </div>
-                            <div class="">
-                                <ul class="flex text-center justify-center">
-                                    <li
-                                        class="bg-green-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                    <li
-                                        class="bg-black rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                    <li
-                                        class="bg-pink-400    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <!-- 2 -->
+                        <div class="img-item3  relative group">
+                            <div class=" bg-cover overflow-hidden "> <img src="media/denim.png" alt=""
+                                    class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
 
-                    </div>
-                </div>
-                <!-- 3 -->
-                <div class="card group">
-                    <div class="img relative -z-30 overflow-hidden">
-                        <img src="./media/photo1.png" alt="" class="h-[400px]">
-                        <div
-                            class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                            <div class="flex">
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                    <i class='bx bx-heart   '></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-search-alt-2'></i>
+                            <div
+                                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[45%] text-base inset-[454px]">
+                                <div class="details block items-center text-center justify-center bg-white p-5 ">
+                                    <h3
+                                        class="flex items-center text-center justify-center font-bold leading-3 text-base">
+                                        DENIM
+                                    </h3>
+                                    <p
+                                        class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]">
+                                        Find your perfect outfit </p>
+                                    <button
+                                        class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
+                                        type="button">Shop Now</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex justify-center text-center">
-                        <div class="block ">
-                            <div class="font-medium  text-sm mt-4 mb-1  "><a href="">Button Up Top Black</a></div>
-                            <div class="flex justify-center">
-                                <span class="font-normal"> $1,256.00</span>
-                            </div>
-                            <div class="icon text-[#ffbe00]">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star-half'></i>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-                <!-- 4 -->
-                <div class="card group  ">
-                    <div class="img relative -z-30 overflow-hidden">
-                        <img src="./media/BLACK_400x.png" alt="" class="h-[400px] ">
-                        <div
-                            class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                            <div class="flex">
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                    <i class='bx bx-heart   '></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-cart-alt'></i>
-                                </div>
-                                <div
-                                    class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
-                                    <i class='bx bx-search-alt-2'></i>
+                        <!-- 3 -->
+                        <div class="img-item4  relative row-span-2 group">
+                            <div class="bg-cover overflow-hidden  "> <img src="media/accesories_770x.png" alt=""
+                                    class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
+                            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%]">
+                                <div class="details block items-center text-center justify-center bg-white p-5 ">
+                                    <h3
+                                        class="flex items-center text-center justify-center font-bold leading-3 text-base">
+                                        ACCESSORIES
+                                    </h3>
+                                    <p
+                                        class="flex items-center text-center justify-center leading-4 mt-2 mb-3 text-[13px]">
+                                        add
+                                        finishing touch to your outfit </p>
+                                    <button
+                                        class="bg-[#000000]  text-white px-2 py-2 font-bold text-xs border border-black hover:bg-transparent hover:text-black "
+                                        type="button">Shop Now</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- 4 -->
                     </div>
-                    <div class="flex justify-center text-center z-60">
-                        <div class="block ">
-                            <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400 "><a href="">Backpack With
-                                    Contrast Bow</a></div>
-                            <div class="flex justify-center">
-                                <span class="font-normal"> $110.00</span>
+                </section>
+                <section class="mt-12 max-w-[1200px] m-auto ">
+                    <div class="flex text-center justify-center items-center mb-16">
+                        <div class="">
+                            <h2 class="font-bold text-2xl"><b>NEW ARRIVALS</b></h2>
+                            <p>Shop our new arrivals from established brands</p>
+                        </div>
+                    </div>
+                    <div class="list grid grid-cols-4 gap-5  ">
+                        <div class="card group">
+                            <div class="img1 relative -z-30 overflow-hidden">
+                                <img src="./media/8_450x.png" alt="" class="h-[400px]">
+                                <div
+                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                    <div class="flex">
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            <i class='bx bx-heart'></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-cart-alt'></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-search-alt-2'></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="icon text-[#ffbe00]">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star-half'></i>
-                            </div>
-                            <div class="">
-                                <ul class="flex text-center justify-center">
-                                    <li
-                                        class="bg-gray-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                    <li
-                                        class="bg-black  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black ">
-                                    </li>
-                                    <li
-                                        class=" bg-pink-400  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                    </li>
-                                </ul>
+                            <div class="flex justify-center text-center">
+                                <div class="block ">
+                                    <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Innerbloom
+                                            Puffer
+                                            Jacket</a></div>
+                                    <div class="flex justify-center">
+                                        <s class="mr-1 font-normal opacity-60">$1,178.00</s>
+                                        <span class="text-sm text-red-400">$761.00</span>
+                                    </div>
+                                    <div class="icon text-[#ffbe00]">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <div class="">
+                                        <ul class="flex text-center justify-center">
+                                            <li
+                                                class="bg-red-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                            <li
+                                                class="bg-blue-600 rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                            <li
+                                                class="bg-black    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-            </div>
-        </section>
-        <section class=" mt-20 max-w-[1200px] m-auto">
-            <div class="grid grid-cols-2 gap-5">
-                <div class="relative group">
-                    <div class="overflow-hidden">
-                        <img src="./media/best-collections_770x.png" alt=""
-                            class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out ">
-                    </div>
-                    <div
-                        class="absolute bg-white w-[50%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
-                        <h3 class="font-extrabold"> FIND THE BEST COLLECTION AROUND THE WORLD</h3>
-                        <button
-                            class=" border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-5 py-1 mt-4"
-                            type="button">Shop Now</button>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <div class="overflow-hidden">
-                        <img src="./media/awesome-tops_770x.png" alt=""
-                            class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out ">
-                    </div>
-                    <div
-                        class="absolute bg-white w-[50%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
-                        <h3 class="font-extrabold"> AWESOME T-SHIRTS, CROP TOPS AND MORE...</h3>
-                        <button
-                            class=" border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-5 py-1 mt-4"
-                            type="button">VIEW COLLECTION</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="mt-12 mb-12 max-w-[1200px] m-auto">
-            <div class="grid grid-cols-5 gap-16 ml-10">
-                <img src="./media/5_0c0397a5-2ba0-4637-a9f6-86e68b3d6289_200x.avif" alt="">
-                <img src="./media/1_6bea7f1e-dc0a-446d-9714-c15ac0eaab06_200x.avif" alt="">
-                <img src="./media/4_200x.avif" alt="">
-                <img src="./media/3_200x.avif" alt="">
-                <img src="./media/2_200x.avif" alt="">
-            </div>
-
-        </section>
-
-    </main>
-    <!-- main -->
-    <footer class="bg-[#fafafa]">
-        <section>
-            <div class="bg-[#fafafa]">
-                <div class="max-w-[1200px] m-auto">
-                    <div class="block text-center justify-center items-center p-14">
-                        <h3 class="text-[22px] font-bold"><b>FRESH FROM OUR BLOG</b></h3>
-                        <p class="text-base">You are going to love this amazing shopify theme.</p>
-                    </div>
-                    <div class="mt-5">
-                        <div class="grid grid-cols-3 gap-7  ">
-                            <div class="">
-                                <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/1.png" alt=""> </div>
-                                <div class="block justify-center text-center items-center mt-3">
-                                    <h4 class="font-bold text-base hover:text-red-400">7 Easy Rules to Write Product
-                                        Descriptions <br>That Sell</br> </h4>
-                                    <span class="text-xs text-[#7c7c7c]">July 16, 2022</span>
+                        <!-- 2 -->
+                        <div class="card group">
+                            <div class="img relative -z-30 overflow-hidden">
+                                <img src="./media/23_400x.jpg" alt="" class="h-[400px]">
+                                <div
+                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                    <div class="flex">
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            <i class='bx bx-heart   '></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-cart-alt'></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-search-alt-2'></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="">
-                                <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/2.png" alt=""> </div>
-                                <div class="block justify-center text-center items-center mt-3">
-                                    <h4 class="font-bold text-base hover:text-red-400">Women Wear that’ll have you
-                                        Daydreaming <br>Your Holiday</br> </h4>
-                                    <span class="text-xs text-[#7c7c7c]">June 26, 2022</span>
+                            <div class="flex justify-center text-center ">
+                                <div class="block ">
+                                    <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Martha
+                                            Knit
+                                            Top</a></div>
+                                    <div class="flex justify-center">
+                                        <span class="font-normal"> $471.00</span>
+                                    </div>
+                                    <div class="icon text-[#ffbe00]">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <div class="">
+                                        <ul class="flex text-center justify-center">
+                                            <li
+                                                class="bg-green-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                            <li
+                                                class="bg-black rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                            <li
+                                                class="bg-pink-400    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="card group">
+                            <div class="img relative -z-30 overflow-hidden">
+                                <img src="./media/photo1.png" alt="" class="h-[400px]">
+                                <div
+                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                    <div class="flex">
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            <i class='bx bx-heart   '></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-cart-alt'></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-search-alt-2'></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="">
-                                <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/3.png" alt=""> </div>
-                                <div class="block justify-center text-center items-center mt-3">
-                                    <h4 class="font-bold text-base hover:text-red-400">Our development is your success
-                                    </h4>
-                                    <div class="text-xs text-[#7c7c7c] flex justify-center text-center items-center">
-                                        <span class="mr-1">March 6, 2019</span>
-                                        <span>
-                                            <i class='bx bx-message-rounded'></i>
-                                            2 comments</span>
+                            <div class="flex justify-center text-center">
+                                <div class="block ">
+                                    <div class="font-medium  text-sm mt-4 mb-1  "><a href="">Button Up Top Black</a>
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <span class="font-normal"> $1,256.00</span>
+                                    </div>
+                                    <div class="icon text-[#ffbe00]">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
                                     </div>
 
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="card group  ">
+                            <div class="img relative -z-30 overflow-hidden">
+                                <img src="./media/BLACK_400x.png" alt="" class="h-[400px] ">
+                                <div
+                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                    <div class="flex">
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            <i class='bx bx-heart   '></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-cart-alt'></i>
+                                        </div>
+                                        <div
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            <i class='bx bx-search-alt-2'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center text-center z-60">
+                                <div class="block ">
+                                    <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400 "><a href="">Backpack
+                                            With
+                                            Contrast Bow</a></div>
+                                    <div class="flex justify-center">
+                                        <span class="font-normal"> $110.00</span>
+                                    </div>
+                                    <div class="icon text-[#ffbe00]">
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star'></i>
+                                        <i class='bx bxs-star-half'></i>
+                                    </div>
+                                    <div class="">
+                                        <ul class="flex text-center justify-center">
+                                            <li
+                                                class="bg-gray-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                            <li
+                                                class="bg-black  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black ">
+                                            </li>
+                                            <li
+                                                class=" bg-pink-400  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </section>
+                <section class=" mt-20 max-w-[1200px] m-auto">
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="relative group">
+                            <div class="overflow-hidden">
+                                <img src="./media/best-collections_770x.png" alt=""
+                                    class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out ">
+                            </div>
+                            <div
+                                class="absolute bg-white w-[50%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
+                                <h3 class="font-extrabold"> FIND THE BEST COLLECTION AROUND THE WORLD</h3>
+                                <button
+                                    class=" border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-5 py-1 mt-4"
+                                    type="button">Shop Now</button>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <div class="overflow-hidden">
+                                <img src="./media/awesome-tops_770x.png" alt=""
+                                    class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out ">
+                            </div>
+                            <div
+                                class="absolute bg-white w-[50%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
+                                <h3 class="font-extrabold"> AWESOME T-SHIRTS, CROP TOPS AND MORE...</h3>
+                                <button
+                                    class=" border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-5 py-1 mt-4"
+                                    type="button">VIEW COLLECTION</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mt-12 mb-12 max-w-[1200px] m-auto">
+                    <div class="grid grid-cols-5 gap-16 ml-10">
+                        <img src="./media/5_0c0397a5-2ba0-4637-a9f6-86e68b3d6289_200x.avif" alt="">
+                        <img src="./media/1_6bea7f1e-dc0a-446d-9714-c15ac0eaab06_200x.avif" alt="">
+                        <img src="./media/4_200x.avif" alt="">
+                        <img src="./media/3_200x.avif" alt="">
+                        <img src="./media/2_200x.avif" alt="">
+                    </div>
+
+                </section>
+
+            </main>
+            <!-- main -->
+            <footer class="bg-[#fafafa]">
+                <section>
+                    <div class="bg-[#fafafa]">
+                        <div class="max-w-[1200px] m-auto">
+                            <div class="block text-center justify-center items-center p-14">
+                                <h3 class="text-[22px] font-bold"><b>FRESH FROM OUR BLOG</b></h3>
+                                <p class="text-base">You are going to love this amazing shopify theme.</p>
+                            </div>
+                            <div class="mt-5">
+                                <div class="grid grid-cols-3 gap-7  ">
+                                    <div class="">
+                                        <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/1.png"
+                                                alt=""> </div>
+                                        <div class="block justify-center text-center items-center mt-3">
+                                            <h4 class="font-bold text-base hover:text-red-400">7 Easy Rules to Write
+                                                Product
+                                                Descriptions <br>That Sell</br> </h4>
+                                            <span class="text-xs text-[#7c7c7c]">July 16, 2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/2.png"
+                                                alt=""> </div>
+                                        <div class="block justify-center text-center items-center mt-3">
+                                            <h4 class="font-bold text-base hover:text-red-400">Women Wear that’ll have
+                                                you
+                                                Daydreaming <br>Your Holiday</br> </h4>
+                                            <span class="text-xs text-[#7c7c7c]">June 26, 2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/3.png"
+                                                alt=""> </div>
+                                        <div class="block justify-center text-center items-center mt-3">
+                                            <h4 class="font-bold text-base hover:text-red-400">Our development is your
+                                                success
+                                            </h4>
+                                            <div
+                                                class="text-xs text-[#7c7c7c] flex justify-center text-center items-center">
+                                                <span class="mr-1">March 6, 2019</span>
+                                                <span>
+                                                    <i class='bx bx-message-rounded'></i>
+                                                    2 comments</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-        </section>
-        <section class="bg-black mt-20">
-            <div class="max-w-[1200px] m-auto flex  justify-between py-5 ">
-                <div class="flex text-white  ">
-                    <div class="mt-2 mr-3 text-lg "><i class="fa-solid fa-truck-fast fa-2xl"></i></div>
-                    <div class="block">
-                        <h5 class="text-sm font-semibold">FREE SHIPPING & RETURN</h5>
-                        <span class="text-xs">Free shipping on all US orders</span>
+                </section>
+                <section class="bg-black mt-20">
+                    <div class="max-w-[1200px] m-auto flex  justify-between py-5 ">
+                        <div class="flex text-white  ">
+                            <div class="mt-2 mr-3 text-lg "><i class="fa-solid fa-truck-fast fa-2xl"></i></div>
+                            <div class="block">
+                                <h5 class="text-sm font-semibold">FREE SHIPPING & RETURN</h5>
+                                <span class="text-xs">Free shipping on all US orders</span>
+                            </div>
+                        </div>
+                        <div class="flex text-white">
+                            <div class="mt-2 mr-3 text-lg"><i class="fa-solid fa-money-bill-1 fa-2xl"></i></i></div>
+                            <div class="">
+                                <h5 class="text-sm font-semibold">MONEY GAURNTEE</h5>
+                                <span class="text-xs">30 days money back guarantee</span>
+                            </div>
+                        </div>
+                        <div class="flex text-white">
+                            <div class="mt-2 mr-3 text-lg"><i class="fa-solid fa-phone-volume fa-2xl"></i></div>
+                            <div class="">
+                                <h5 class="text-sm font-semibold">ONLINE SUPPORT</h5>
+                                <span class="text-xs">We support online 24/7 on day</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="flex text-white">
-                    <div class="mt-2 mr-3 text-lg"><i class="fa-solid fa-money-bill-1 fa-2xl"></i></i></div>
-                    <div class="">
-                        <h5 class="text-sm font-semibold">MONEY GAURNTEE</h5>
-                        <span class="text-xs">30 days money back guarantee</span>
-                    </div>
-                </div>
-                <div class="flex text-white">
-                    <div class="mt-2 mr-3 text-lg"><i class="fa-solid fa-phone-volume fa-2xl"></i></div>
-                    <div class="">
-                        <h5 class="text-sm font-semibold">ONLINE SUPPORT</h5>
-                        <span class="text-xs">We support online 24/7 on day</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="border-b">
-            <div class="footer-top max-w-[1200px] mt-8 m-auto grid grid-cols-5 gap-5 ">
-                <div class="nav-menu">
-                    <p class="logo mb-5"><img src="./media/logo.png" alt=""></p>
-                    <div class="text text-sm">
-                        <p class="mb-5 ">55 Gallaxy Enque,
-                            <br>2568 steet, 23568 NY </br>
-                        </p>
-                        <p class="mb-5"> <b>Phone:</b> (440) 000 000 0000</p>
-                        <p class="mb-5"> <b>Email: </b> sales@yousite.com
-                        </p>
-                    </div>
-                    <div class="icon ml-2 text-lg">
-                        <i class='bx bxl-facebook'></i>
-                        <i class='bx bxl-twitter'></i>
-                        <i class='bx bxl-pinterest-alt'></i>
-                        <i class='bx bxl-instagram'></i>
-                    </div>
-                </div>
-                <div class="nav-menu">
-                    <h4 class="text-sm font-semibold mb-3">INFORMATION</h4>
-                    <ul class="text-sm">
-                        <li class="mb-2">About us</li>
-                        <li class="mb-2">Contact Us</li>
-                        <li class="mb-2">Career</li>
-                        <li class="mb-2">My Account</li>
-                        <li class="mb-2">Orders and Returns</li>
-                    </ul>
-                </div>
-                <div class="nav-menu">
-                    <h4 class="text-sm font-semibold mb-3">QUICK SHOP</h4>
-                    <ul class="text-sm">
-                        <li class="mb-2">Fashion</li>
-                        <li class="mb-2">Men</li>
-                        <li class="mb-2">Furniture</li>
-                        <li class="mb-2">Home Decor</li>
-                        <li class="mb-2">Shoes</li>
+                </section>
+                <div class="border-b">
+                    <div class="footer-top max-w-[1200px] mt-8 m-auto grid grid-cols-5 gap-5 ">
+                        <div class="nav-menu">
+                            <p class="logo mb-5"><img src="./media/logo.png" alt=""></p>
+                            <div class="text text-sm">
+                                <p class="mb-5 ">55 Gallaxy Enque,
+                                    <br>2568 steet, 23568 NY </br>
+                                </p>
+                                <p class="mb-5"> <b>Phone:</b> (440) 000 000 0000</p>
+                                <p class="mb-5"> <b>Email: </b> sales@yousite.com
+                                </p>
+                            </div>
+                            <div class="icon ml-2 text-lg">
+                                <i class='bx bxl-facebook'></i>
+                                <i class='bx bxl-twitter'></i>
+                                <i class='bx bxl-pinterest-alt'></i>
+                                <i class='bx bxl-instagram'></i>
+                            </div>
+                        </div>
+                        <div class="nav-menu">
+                            <h4 class="text-sm font-semibold mb-3">INFORMATION</h4>
+                            <ul class="text-sm">
+                                <li class="mb-2">About us</li>
+                                <li class="mb-2">Contact Us</li>
+                                <li class="mb-2">Career</li>
+                                <li class="mb-2">My Account</li>
+                                <li class="mb-2">Orders and Returns</li>
+                            </ul>
+                        </div>
+                        <div class="nav-menu">
+                            <h4 class="text-sm font-semibold mb-3">QUICK SHOP</h4>
+                            <ul class="text-sm">
+                                <li class="mb-2">Fashion</li>
+                                <li class="mb-2">Men</li>
+                                <li class="mb-2">Furniture</li>
+                                <li class="mb-2">Home Decor</li>
+                                <li class="mb-2">Shoes</li>
 
-                    </ul>
-                </div>
-                <div class="nav-menu">
-                    <h4 class="text-sm font-semibold mb-3">CUSTOMER SERVICES</h4>
-                    <ul class="text-sm">
-                        <li class="mb-2">Help & FAQs</li>
-                        <li class="mb-2">Returns Policy</li>
-                        <li class="mb-2">Terms & Conditions</li>
-                        <li class="mb-2">Privacy Policy</li>
-                        <li class="mb-2">Support Center</li>
-                    </ul>
+                            </ul>
+                        </div>
+                        <div class="nav-menu">
+                            <h4 class="text-sm font-semibold mb-3">CUSTOMER SERVICES</h4>
+                            <ul class="text-sm">
+                                <li class="mb-2">Help & FAQs</li>
+                                <li class="mb-2">Returns Policy</li>
+                                <li class="mb-2">Terms & Conditions</li>
+                                <li class="mb-2">Privacy Policy</li>
+                                <li class="mb-2">Support Center</li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-menu">
+                            <h4 class="text-sm font-semibold mb-3">NEWSLETTER</h4>
+                            <p class="mb-5 text-sm">Enter your email to receive daily news and get 20% off coupon for
+                                all items.
+                            </p>
+                            <form action="">
+                                <input type="email" placeholder="Email address" class="p-2 border border-inherit mb-2">
+                                <button
+                                    class="bg-[#000000] px-6 py-3 text-white text-xs font-bold"><span>Subscribe</span></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="nav-menu">
-                    <h4 class="text-sm font-semibold mb-3">NEWSLETTER</h4>
-                    <p class="mb-5 text-sm">Enter your email to receive daily news and get 20% off coupon for all items.
-                    </p>
-                    <form action="">
-                        <input type="email" placeholder="Email address" class="p-2 border border-inherit mb-2">
-                        <button
-                            class="bg-[#000000] px-6 py-3 text-white text-xs font-bold"><span>Subscribe</span></button>
-                    </form>
+                <div class="footer-b p-5">
+                    <div class="max-w-[1200px] m-auto">
+                        <div class="text-sm">
+                            <p>© 2023 Avone. All Rights Reserved. Ecommerce Software by Shopify</p>
+                            <span>Designed by AdornThemes</span>
+                        </div>
+                        <div class=""></div>
+                    </div>
                 </div>
-            </div>
+
+            </footer>
+            <!-- footer -->
+
         </div>
-
-        <div class="footer-b p-5">
-            <div class="max-w-[1200px] m-auto">
-                <div class="text-sm">
-                    <p>© 2023 Avone. All Rights Reserved. Ecommerce Software by Shopify</p>
-                    <span>Designed by AdornThemes</span>
-                </div>
-                <div class=""></div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer -->
-
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
