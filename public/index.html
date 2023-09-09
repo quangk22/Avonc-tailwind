@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="../public/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,600;1,100&display=swap');
-    </style>
+    
 </head>
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,600;1,100&display=swap');
+</style>
 <body>
     <div class="relative max-h-full top-0 h ">
         <!-- search -->
@@ -44,7 +44,7 @@
             <div class="h-[100vh] bg-gray-950 bg-opacity-50" id="overlay"></div>
         </div>
         <!-- cart -->
-        <div class=" max-w-full fixed right-0 z-50  hidden  " id="cardContainer">
+        <div class=" max-w-full w-[100%] fixed right-0 z-50  hidden  " id="cardContainer">
             <div class="flex">
                 <div class=" w-[75vw] h-[100vh] bg-gray-950 bg-opacity-50" id="overlayCart"></div>
                 <div class="w-[25vw] h-[100vh] bg-white">
@@ -56,59 +56,402 @@
                     </div>
 
                     <div class="block justify-center items-center text-center p-10">
-                        <p class="text-4xl" ><i class='bx bx-shopping-bag'></i></p>
+                        <p class="text-4xl"><i class='bx bx-shopping-bag'></i></p>
                         <p class="py-5">You don't have any items in your cart.</p>
-                        <div class=" font-bold uppercase text-xs text-white "><a href=""
-                                class="bg-[#000] py-2 px-20">Continue shopping</a></div>
+                        <div class=" font-bold uppercase text-xs text-white bg-[#000]  py-2 "><a href=""
+                                class=" ">Continue shopping</a></div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- main -->
         <div class="container-full ">
-            <header>
-                <div class="fixed top-0 z-10 bg-white w-full shadow-md">
-                    <div class="flex  justify-between max-w-[1200px] m-auto  py-2 ">
-                        <div class="logo flex font-bold text-3xl items-center">
-                            <a href="index.html">AVONE</a>
+            <header >
+                <div class="fixed top-0 z-10 bg-white w-full shadow-md ">
+                    <div class="flex  justify-between max-w-[1200px] m-auto relative">
+                        <div class="logo flex  items-center">
+                            <a href="index.html"><img src="./media/logo.png" alt=""></a>
                         </div>
-                        <div class="menu flex items-center text-center">
-                            <ul class="flex text-sm font-normal uppercase ">
-                                <li class="mr-5 p-3  hover:text-[#f57480] "><a href="">Home</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Shop</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Features</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">New in</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">LookBook</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Pages</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Blog</a></li>
-                                <li class="mr-5 p-3  hover:text-[#f57480]"><a href="">Buy Now!</a></li>
+                        <div class="menu flex items-center text-center uppercase">
+                            <ul class="flex text-sm font-normal  ">
+                                <li class=" p-5  group ">
+                                    <a href="" class="hover:text-[#f57480] relative">Home</a>
+                                    <div class=" absolute bg-white w-full top-[100%] left-0 border hidden  group-hover:block">
+                                        <div class="block ">
+                                            <div class="w-full grid grid-cols-4 mt-5 px-5">
+                                                <!-- 1 -->
+                                                <div class="text-start">
+                                                    <h4 class="font-bold text-sm hover:text-[#f57480]">HOMEPAGES
+                                                    </h4>
+                                                    <ul class="normal-case  cursor-pointer text-sm">
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 01</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 02</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 03</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 04</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 05</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 06</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 07</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 08</li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 09</li>
+                                                    </ul>
+                                                </div>
+                                                <!--2 -->
+                                                <div class="text-start">
+                                                    <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">HOMEPAGES
+                                                    </h4>
+                                                    <ul class="normal-case mr-10 cursor-pointer text-sm">
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Modern New
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 10
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 11
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 13
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 14
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 15
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Home 17
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Yoga Shop
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Jewelry Store
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- 3-->
+                                                <div class="text-start">
+                                                    <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">HOME SKINS
+
+                                                    </h4>
+                                                    <ul class="normal-case mr-10 cursor-pointer text-sm">
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Pet Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Medical
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Christmas 1
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Christmas 2
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Furniture Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Furniture Store 2
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Shoes Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Pottery Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Wine Store Hot
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="text-start">
+                                                    <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">HOME SKINS
+                                                    </h4>
+                                                    <ul class="normal-case mr-10 cursor-pointer text-sm">
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Bag Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Digital Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Beachwear Hot
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Bike Store
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Plants New
+                                                        </li>
+                                                        <li
+                                                            class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                            Kids Toys New</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-5 p-5">
+                                                <div class=""><img src="./media/banerMenu.jpg" alt=""></div>
+                                                <div class=""><img src="./media/bannerMenu2.jpg" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=" p-5   group">
+                                    <a href="" class="hover:text-[#f57480] relative">Shop</a>
+                                    <div
+                                        class="absolute left-0 top-[100%] w-full bg-white border hidden group-hover:block">
+                                        <div class="flex justify-center items-center text-center">
+                                            <div class="flex w-full h-[350px] p-5">
+                                                <div class="grid grid-cols-4 gap-2 w-[80%]">
+                                                    <!-- 1 -->
+                                                    <div class="text-start">
+                                                        <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">
+                                                            COLLECTION LIST
+                                                        </h4>
+                                                        <ul class="normal-case  cursor-pointer text-sm text-start">
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform ">
+                                                                2 Columns</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                3 Columns</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                4 Columns</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                5 Columns</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                6 Columns</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                7 Columns</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Sub Collection List New
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Brand List Page
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <!-- 2 -->
+                                                    <div class="text-start">
+                                                        <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">
+                                                            SIDEBAR OPTIONS
+                                                        </h4>
+                                                        <ul class="normal-case  cursor-pointer text-sm">
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Dynamic Filters
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Left Sidebar
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Right Sidebar</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Fullwidth/No Sidebar</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                No Sidebar/No Filter</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Products grid up to 7</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                List View</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Collection Countdown</li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <!-- 3 -->
+                                                    <div class=" text-start">
+                                                        <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">
+                                                            HEADING STYLES
+
+                                                        </h4>
+                                                        <ul class="normal-case  cursor-pointer text-sm">
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Category Slideshow</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Simple Heading</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Small Heading</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Big Heading With Image</li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Heading With Banner#1
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Heading With Banner#2
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Swatches Style
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Classic Pagination
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <!-- 4 -->
+                                                    <div class="text-xl text-start">
+                                                        <h4 class="mr-4 font-bold text-sm hover:text-[#f57480]">
+                                                            POPULAR FEATURES
+
+                                                        </h4>
+                                                        <ul class="normal-case  cursor-pointer text-sm">
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Ajax Load More
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Infinite Scroll
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Countdown
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Grid Style 1
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Grid Style 2
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Grid Style 3
+                                                            </li>
+                                                            <li
+                                                                class="mt-2 hover:text-[#f57480] hover:translate-x-2  transition-transform">
+                                                                Grid Style 4</li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="w-[20%]">
+                                                    <div class="h-[250px]">
+                                                        <a href="">
+                                                            <img src="./media/WOMXN.jpg" alt="" class="h-full w-full">
+                                                            <div class="border mt-2 py-2 bg-white">FLAT 50% OFF ON
+                                                                WOMENS</div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=" p-5  hover:text-[#f57480]"><a href="">Features</a></li>
+                                <li class=" p-5  hover:text-[#f57480]"><a href="">New in</a></li>
+                                <li class=" p-5  hover:text-[#f57480]"><a href="">LookBook</a></li>
+                                <li class=" p-5  hover:text-[#f57480]"><a href="">Pages</a></li>
+                                <li class=" p-5  hover:text-[#f57480]"><a href="">Blog</a></li>
+                                <li class=" p-5  hover:text-[#f57480]"><a href="">Buy Now!</a></li>
                             </ul>
                         </div>
                         <div class="icon flex items-center text-center text-2xl">
                             <button id="showSearchButton"><i class='bx bx-search mr-4 cursor-pointer'></i></button>
+                            <!-- user -->
                             <button id="showUser" class="relative">
                                 <i class='bx bx-user   mr-4 cursor-pointer'>
                                     <div class="absolute -right-[70px] top-11 w-[300px] bg-white text-xs border p-5 hidden transition-all delay-550 duration-500 ease-in"
                                         id="User">
                                         <div class="flex justify-center text-center items-center mb-5">
-                                            <p class=" text-white  py-1 font-bold text-sm  w-[250px] bg-[#000] "><a
-                                                    href="#">LOGIN</a></p>
+                                            <p
+                                                class=" text-white  py-1 font-bold text-sm  w-[250px] bg-[#000] uppercase ">
+                                                <a href="#">LOGIN</a>
+                                            </p>
                                         </div>
-                                        <div class="flex justify-center text-center items-center text-sm">
+                                        <div class="flex justify-center text-center items-center text-sm uppercase">
                                             <span class="mr-1">New User? </span>
-                                            <span>Register Now</span>
+                                            <span class="underline hover:no-underline">Register Now</span>
                                         </div>
 
                                         <div class="px-4">
                                             <div class="flex justify-start ml-3 py-4 font-bold">CURRECNY</div>
                                             <form action="">
-                                                <ul class="grid grid-cols-4 gap-1">
-                                                    <li class="border p-1">AUD $</li>
-                                                    <li class="border p-1">EUR €</li>
-                                                    <li class="border p-1">GBP £</li>
-                                                    <li class="border p-1">INR ₹</li>
-                                                    <li class="border p-1">USD $</li>
-                                                    <li class="border p-1">CAD $</li>
+                                                <ul class="grid grid-cols-4 gap-1 ">
+                                                    <li
+                                                        class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                        AUD $</li>
+                                                    <li
+                                                        class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                        EUR €</li>
+                                                    <li
+                                                        class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                        GBP £</li>
+                                                    <li
+                                                        class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                        INR ₹</li>
+                                                    <li
+                                                        class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                        USD $</li>
+                                                    <li
+                                                        class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                        CAD $</li>
                                                 </ul>
                                             </form>
                                         </div>
@@ -116,9 +459,15 @@
                                         <div class="px-4">
                                             <div class="flex justify-start ml-3 py-4 font-bold">LANGUAGE</div>
                                             <ul class="grid grid-cols-4 gap-1">
-                                                <li class="border p-1">English</li>
-                                                <li class="border p-1">Deutsch</li>
-                                                <li class="border p-1">Français</li>
+                                                <li
+                                                    class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                    English</li>
+                                                <li
+                                                    class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                    Deutsch</li>
+                                                <li
+                                                    class="border border-current text-[#b2b2b2] p-1 hover:border-slate-700 hover:text-black">
+                                                    Français</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -130,7 +479,7 @@
                                     0</div>
                             </i>
                             <button id="showCart">
-                                <i class='bx bx-shopping-bag mr-4 cursor-pointer relative' >
+                                <i class='bx bx-shopping-bag mr-4 cursor-pointer relative'>
                                     <div
                                         class="absolute w-[15px] h-[15px] rounded-full top-[-10px] right-[-10px] text-[11px] bg-black flex items-center justify-center text-white ">
                                         0</div>
@@ -141,12 +490,12 @@
 
                 </div>
             </header>
-            <div class="banner">
+            <div class="banner mt-[61px]">
                 <section>
-                    <div class="  relative">
-                        <div class="banner w-full ">
+                    <div class="  ">
+                        <div class="banner w-full relative">
                             <div class="img-banner w-full  h-full "><img src="./media/baner1.png" alt=""></div>
-                            <div class="text-item absolute top-[30%] left-[5%]">
+                            <div class="text-item absolute left-1/4 top-1/2 transform -translate-x-1/4 -translate-y-1/2">
 
                                 <p class="flex text-center justify-center leading-[19.2px] text-base font-normal">START
                                     A
@@ -275,15 +624,15 @@
                                     class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
                                     <div class="flex">
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
                                             <i class='bx bx-heart'></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-cart-alt'></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-search-alt-2'></i>
                                         </div>
                                     </div>
@@ -330,15 +679,15 @@
                                     class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
                                     <div class="flex">
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
                                             <i class='bx bx-heart   '></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-cart-alt'></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-search-alt-2'></i>
                                         </div>
                                     </div>
@@ -384,15 +733,15 @@
                                     class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
                                     <div class="flex">
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
                                             <i class='bx bx-heart   '></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-cart-alt'></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-search-alt-2'></i>
                                         </div>
                                     </div>
@@ -426,15 +775,15 @@
                                     class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
                                     <div class="flex">
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
                                             <i class='bx bx-heart   '></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-cart-alt'></i>
                                         </div>
                                         <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1">
+                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
                                             <i class='bx bx-search-alt-2'></i>
                                         </div>
                                     </div>
