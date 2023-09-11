@@ -18,7 +18,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,600;1,100&display=swap');
 </style>
 
-<body>
+<body >
     <div class="relative max-h-full top-0 h ">
         <!-- search -->
         <div class="w-full h-[160px] fixed bg-white z-50 hidden   -translate-y-[100%] " id="searchContainer">
@@ -48,16 +48,15 @@
         </div>
         <!-- cart -->
         <div class=" max-w-full  fixed right-0 z-50  hidden  h-full " id="cardContainer">
-            <div class="flex w-full">
-                <div class=" w-[77vw] h-[100vh] bg-gray-950 bg-opacity-50" id="overlayCart"></div>
-                <div class="w-[25vw] h-[100vh] bg-white">
+            <div class="flex w-full bg-gray-950 bg-opacity-50" >
+                <div class="w-[100vw] h-[100vh]" id="overlayCart"></div>
+                <div class="w-[40vw] h-[100vh] bg-white max-lg:w-[55vw]">
                     <div class="flex justify-between p-5 ">
                         <h4 class="font-bold">YOUR CART (0)</h4>
                         <button id="closeCart" class="text-xs ">
                             <i class="fa-solid fa-x"></i>
                         </button>
                     </div>
-
                     <div class="block justify-center items-center text-center p-10">
                         <p class="text-4xl"><i class='bx bx-shopping-bag'></i></p>
                         <p class="py-5">You don't have any items in your cart.</p>
@@ -68,7 +67,7 @@
             </div>
         </div>
         <!-- detail -->
-        <div class="absolute top-24 left-1/2 -translate-x-1/2 bg-white max-w-[800px] border p-5 hidden">
+        <div class="absolute top-24 left-1/2 z-50 -translate-x-1/2 bg-white max-w-[800px] border p-5 hidden">
             <div class="flex justify-end"><i class='bx bx-x'></i></div>
             <div class=" w-full grid grid-cols-2 ">
                 <div class="block justify-center text-center px-5">
@@ -108,7 +107,7 @@
                         COLOR:
                         <b>BLACK</b>
                     </div>
-                    <div class="flex bg-cover overflow-hidden mt-2 mb-5">
+                    <div class="flex bg-cover object-cover overflow-hidden mt-2 mb-5">
                         <div class="w-[50px] h-[50px] pr-1 "><img src="media/8_red.png" alt="" class=""></div>
                         <div class="w-[50px] h-[50px] pr-1 "><img src="media/888.png" alt="" class=""></div>
                         <div class="w-[50px] h-[50px] pr-1 "><img src="media/888_black.png   " alt="" class=""></div>
@@ -134,16 +133,24 @@
         <div class=" w-[100%] z-40 absolute ">
             <header class="z-10 w-full">
                 <div class="fixed top-0 z-10 bg-white w-full shadow-md ">
-                    <div class="flex  justify-between max-w-[1200px] m-auto relative px-5">
-                        <div class="logo flex  items-center w-[100px] h-auto">
+                    <div class="flex  justify-between max-w-[1200px] m-auto relative px-5 max-lg:max-w-full">
+                        <div class="mobi flex items-center text-center text-xl lg:hidden">
+                            <div class="mr-4" >
+                                <i class='bx bx-menu'></i>
+                            </div>
+                            <div class="" id="showSearchButton2">
+                                <i class='bx bx-search' ></i>
+                            </div>
+                        </div>
+                        <div class="logo flex  items-center  justify-center text-center w-[100px] h-[60px]">
                             <a href="index.html"><img src="./media/logo.png" alt=""></a>
                         </div>
-                        <div class="menu flex items-center text-center uppercase">
+                        <div class="menu flex items-center text-center uppercase max-lg:hidden">
                             <ul class="flex text-sm font-normal  ">
                                 <li class=" p-5  group ">
                                     <a href="" class="hover:text-[#f57480] relative">Home</a>
                                     <div
-                                        class=" absolute bg-white w-[60%] top-[100%] left-[12%] translate-x-[70px] border hidden  group-hover:block">
+                                        class=" absolute bg-white w-[60%] top-[100%] left-[12%] translate-x-[70px] border hidden  group-hover:block ">
                                         <div class="block ">
                                             <div class="w-full grid grid-cols-4 mt-5 px-5">
                                                 <!-- 1 -->
@@ -307,8 +314,7 @@
                                 </li>
                                 <li class=" p-5   group">
                                     <a href="" class="hover:text-[#f57480] relative">Shop</a>
-                                    <div
-                                        class="absolute left-0 top-[100%] w-full bg-white border hidden group-hover:block">
+                                    <div class="absolute left-0 top-[100%] w-full bg-white border hidden group-hover:block">
                                         <div class="flex justify-center items-center text-center">
                                             <div class="flex w-full h-[350px] p-5">
                                                 <div class="grid grid-cols-4 gap-2 w-[80%]">
@@ -472,7 +478,157 @@
                                     </div>
                                 </li>
                                 <li class=" p-5  hover:text-[#f57480]"><a href="">Features</a></li>
-                                <li class=" p-5  hover:text-[#f57480]"><a href="">New in</a></li>
+                                <li class=" p-5  group">
+                                    <a href="" class="hover:text-[#f57480] relative">New in</a>
+                                    <div class="absolute left-0 top-[100%] w-full bg-white border hidden group-hover:block">
+                                        <div class="flex w-full h-[350px] ">
+                                            <div class="bg-[#f4f4f4] w-[250px]">
+                                                <ul class="block text-start">
+                                                    <li class="p-2 border-b "><span class="ml-5 font-bold">WOMEN</span></li>
+                                                    <li class="p-2 border-b "><span class="ml-5 font-bold">MEN</span></li>
+                                                    <li class="p-2 border-b "><span class="ml-5 font-bold">KIDS</span></li>
+                                                    <li class="p-2 border-b "><span class="ml-5 font-bold">ACCESSORIES</span></li>
+                                                    <li class="p-2 border-b "><span class="ml-5 font-bold">BEAUTY</span></li>
+                                                </ul>
+                                            </div>
+                                           <div class="flex justify-between w-full px-5">
+                                            <div class="grid grid-cols-2 gap-32 ml-10 mt-6">
+                                                <div class="">
+                                                 <ul class="text-sm capitalize cursor-pointer">
+                                                     <li class="mt-2 flex justify-start  hover:text-[#f57480] hover:translate-x-2  transition-transform ">Crop top</li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Mini Dress
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Long Dress
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Swimsuits
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Ethnic Wear
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Trousers
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start  hover:text-[#f57480] hover:translate-x-2  transition-transform">Jackets
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Shapewear
+                                                    </li>
+                                                     <li class="mt-2 flex justify-start   hover:text-[#f57480] hover:translate-x-2  transition-transform">Lingerie
+                                                    </li>
+                                                 </ul>
+                                                </div>
+                                                 <div class="flex justify-start">
+                                                     <ul class="text-sm capitalize cursor-pointer">
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Sweetshirts
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Short Dress
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Party Dress
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Workwear
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Sports Wear
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Multipacks
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Designer Dress
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Socks & Tights
+                                                        </li>
+                                                         <li class="mt-2 flex justify-start hover:text-[#f57480] hover:translate-x-2  transition-transform">Blazers</li>
+                                                     </ul>
+                                                 </div>
+                                                 
+                                             </div>
+                                             <div class="block  mt-5">
+                                                 <ul class="grid grid-cols-2 grid-rows-3 gap-5 gap-x-10">
+                                                     <li class="flex max-w-[200px] w-[100%] h-14 mb-5">
+                                                          <img src="./media/women1.jpg" alt="" class="w-[70px] h-20" > 
+                                                          <div class="ml-5">
+                                                             <h4 class="text-sm lowercase font-bold"> Women Shorts</h4>
+                                                             <p class="flex justify-start">$474.00</p>
+                                                             <div class="text-[#ffbe00]">
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                             </div>
+                                                          </div>  
+                                                     </li>
+                                                     <li class="flex max-w-[200px] w-[100%] h-14 mb-5">
+                                                         <img src="./media/women2.jpg" alt=""  class="w-[70px] h-20">
+                                                         <div class="ml-5">
+                                                             <h4 class="text-sm lowercase font-bold"> Women Shorts</h4>
+                                                             <p class="flex justify-start">$474.00</p>
+                                                             <div class="text-[#ffbe00]">
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                             </div>
+                                                          </div>  
+                                                     </li>
+                                                     <li class="flex max-w-[200px] w-[100%] h-14 mb-5">
+                                                         <img src="./media/women3.jpg" alt=""  class="w-[70px] h-20">
+                                                         <div class="ml-5">
+                                                             <h4 class="text-sm lowercase font-bold"> Women Shorts</h4>
+                                                             <p class="flex justify-start">$474.00</p>
+                                                             <div class="text-[#ffbe00]">
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                                 <i class='bx bx-star'></i>
+                                                             </div>
+                                                          </div>  
+                                                     </li>
+                                                     <li class="flex max-w-[200px] w-[100%] h-14 mb-5">
+                                                         <img src="./media/women4.jpg" alt=""  class="w-[70px] h-20"> 
+                                                         <div class="ml-5">
+                                                            <h4 class="text-sm lowercase font-bold"> Women Shorts</h4>
+                                                            <p class="flex justify-start">$474.00</p>
+                                                            <div class="text-[#ffbe00]">
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                            </div>
+                                                         </div>  
+                                                    </li>
+                                                    <li class="flex max-w-[200px] w-[100%] h-14 mb-5">
+                                                        <img src="./media/women5.jpg" alt=""  class="w-[70px] h-20">
+                                                        <div class="ml-5">
+                                                            <h4 class="text-sm lowercase font-bold"> Women Shorts</h4>
+                                                            <p class="flex justify-start">$474.00</p>
+                                                            <div class="text-[#ffbe00]">
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                            </div>
+                                                         </div>  
+                                                    </li>
+                                                    <li class="flex max-w-[200px] w-[100%] h-14 mb-5">
+                                                        <img src="./media/women6.jpg" alt=""  class="w-[70px] h-20">
+                                                        <div class="ml-5">
+                                                            <h4 class="text-sm lowercase font-bold"> Women Shorts</h4>
+                                                            <p class="flex justify-start">$474.00</p>
+                                                            <div class="text-[#ffbe00]">
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                                <i class='bx bx-star'></i>
+                                                            </div>
+                                                         </div>  
+                                                    </li>
+                                                 </ul>
+                                             </div>
+                                           </div>
+                                           
+                                    </div>
+                                </li>
                                 <li class=" p-5  hover:text-[#f57480]"><a href="">LookBook</a></li>
                                 <li class=" p-5  hover:text-[#f57480]"><a href="">Pages</a></li>
                                 <li class=" p-5  hover:text-[#f57480]"><a href="">Blog</a></li>
@@ -480,11 +636,11 @@
                             </ul>
                         </div>
                         <div class="icon flex items-center text-center text-xl">
-                            <button id="showSearchButton"><i class='bx bx-search mr-4 cursor-pointer'></i></button>
+                            <button id="showSearchButton" class="max-lg:hidden"><i class='bx bx-search mr-4 cursor-pointer'></i></button>
                             <!-- user -->
-                            <button id="showUser" class="relative">
+                            <button id="showUser" class="relative ">
                                 <i class='bx bx-user   mr-4 cursor-pointer'>
-                                    <div class="absolute -right-[70px] top-11 w-[300px] bg-white text-xs border p-5 hidden transition-all delay-550 duration-500 ease-in"
+                                    <div class="absolute -right-[70px] top-11 w-[300px] bg-white text-xs border p-5 hidden transition-all delay-550 duration-500 ease-in max-lg:-right-[34px]"
                                         id="User">
                                         <div class="flex justify-center text-center items-center mb-5">
                                             <p
@@ -540,7 +696,7 @@
                                     </div>
                                 </i>
                             </button>
-                            <i class='bx bx-heart mr-4  cursor-pointer relative'>
+                            <i class='bx bx-heart mr-4  cursor-pointer relative max-lg:hidden'>
                                 <div
                                     class="absolute w-[15px] h-[15px] rounded-full top-[-10px] right-[-10px] text-[11px] bg-black flex items-center justify-center text-white">
                                     0</div>
@@ -557,7 +713,7 @@
 
                 </div>
             </header>
-            <div class="banner mt-[61px] w-full h-[70%]">
+            <div class="banner mt-[61px] w-[100vw] h-[70%]">
                 <section>
                     <div class="  ">
                         <div class="banner w-full relative">
@@ -569,7 +725,7 @@
                                     A
                                     FREE TRIAL
                                     AND ENJOY</p>
-                                <h2 class="flex text-center justify-center text-[47px] mb-[25px] font-bold">
+                                <h2 class="flex text-center justify-center text-[47px] mb-[25px] font-bold ">
                                     <b class="inline  tracking-[0.94px] leading-[51.7px]">
                                         3 months of Shopify
                                         <br>
@@ -588,11 +744,12 @@
                     </div>
                 </section>
             </div>
+            <!--  -->
             <main class="mt-[60px] w-full max-w-[1200px] m-auto px-5">
                 <section class=" mt-5  ">
-                    <div class="grid gap-5 grid-cols-2 " style="grid-template-rows: 1fr 189px 1fr;">
-                        <div class="img-item1  relative row-span-2 group">
-                            <div class=" bg-cover overflow-hidden  "> <img src="media/womens-top_770x.png" alt=""
+                    <div class="grid-item" >
+                        <div class="img-item1  relative  group">
+                            <div class=" bg-cover object-cover overflow-hidden  "> <img src="media/womens-top_770x.png" alt=""
                                     class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
                             <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base">
                                 <div class="details block items-center text-center justify-center bg-white p-5 ">
@@ -612,7 +769,7 @@
                         </div>
                         <!-- 1 -->
                         <div class="img-item2  relative group">
-                            <div class="bg-cover overflow-hidden  "> <img src="media/men-clothing_770x.png" alt=""
+                            <div class="bg-cover object-cover overflow-hidden  "> <img src="media/men-clothing_770x.png" alt=""
                                     class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
                             <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base">
                                 <div class="details block items-center text-center justify-center bg-white p-5">
@@ -633,11 +790,11 @@
                         </div>
                         <!-- 2 -->
                         <div class="img-item3  relative group">
-                            <div class=" bg-cover overflow-hidden "> <img src="media/denim.png" alt=""
+                            <div class=" bg-cover object-cover overflow-hidden "> <img src="media/denim.png" alt=""
                                     class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
 
                             <div
-                                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[45%] text-base inset-[454px]">
+                                class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%] text-base ">
                                 <div class="details block items-center text-center justify-center bg-white p-5 ">
                                     <h3
                                         class="flex items-center text-center justify-center font-bold leading-3 text-base">
@@ -653,8 +810,8 @@
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div class="img-item4  relative row-span-2 group">
-                            <div class="bg-cover overflow-hidden  "> <img src="media/accesories_770x.png" alt=""
+                        <div class="img-item4  relative group">
+                            <div class="bg-cover object-cover overflow-hidden  "> <img src="media/accesories_770x.png" alt=""
                                     class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out "></div>
                             <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[45%]">
                                 <div class="details block items-center text-center justify-center bg-white p-5 ">
@@ -683,11 +840,11 @@
                         </div>
                     </div>
                     <div class="flex justify-center text-center items-center relative ">
-                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute left-[-30px] rounded-full   hover:bg-gray-400 cursor-pointer "
+                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute left-[-30px] rounded-full   hover:bg-gray-400 cursor-pointer max-lg:-left-[5px] max-lg:bg-white"
                             id="prev">
                             <i class='bx bx-chevron-left'></i>
                         </div>
-                        <div class="list flex " id="slide">
+                        <div class="grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 " id="slide">
                             <!-- 1 -->
                             <div class="card group px-2 object-cover">
                                 <div class="img1 relative -z-30 overflow-hidden">
@@ -799,7 +956,7 @@
                                 </div>
                             </div>
                             <!-- 3 -->
-                            <div class="card group px-2 object-cover">
+                            <div class="card group px-2 object-cover max-md:hidden">
                                 <div class="img relative -z-30 overflow-hidden">
                                     <img src="./media/photo1.png" alt="" class="h-[400px]">
                                     <div
@@ -841,7 +998,7 @@
                                 </div>
                             </div>
                             <!-- 4 -->
-                            <div class="card group px-2 object-cover ">
+                            <div class="card group px-2 object-cover max-lg:hidden">
                                 <div class="img relative -z-30 overflow-hidden">
                                     <img src="./media/BLACK_400x.png" alt="" class="h-[400px] ">
                                     <div
@@ -896,22 +1053,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute right-[-30px] rounded-full   hover:bg-gray-400 cursor-pointer"
+                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute right-[-30px]  rounded-full   hover:bg-gray-400 cursor-pointer max-lg:-right-[5px] max-lg:bg-white"
                             id="next">
                             <i class='bx bx-chevron-right'></i>
                         </div>
                     </div>
                 </section>
                 <section class=" mt-20 ">
-                    <div class="grid grid-cols-2 gap-5">
+                    <div class="grid grid-cols-2 gap-5 max-md:grid-rows-2 max-md:grid-cols-none">
                         <div class="relative group">
                             <div class="overflow-hidden">
                                 <img src="./media/best-collections_770x.png" alt=""
                                     class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out ">
                             </div>
                             <div
-                                class="absolute bg-white w-[50%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
-                                <h3 class="font-extrabold"> FIND THE BEST COLLECTION AROUND THE WORLD</h3>
+                                class="absolute bg-white w-[50%] max-lg:w-[60%] max-md:w-[90%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
+                                <h3 class="font-extrabold max-lg:text-[13px]"> FIND THE BEST COLLECTION AROUND THE WORLD</h3>
                                 <button
                                     class=" border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-5 py-1 mt-4"
                                     type="button">Shop Now</button>
@@ -923,8 +1080,8 @@
                                     class="group-hover:scale-110 transition delay-550 duration-500 ease-in-out ">
                             </div>
                             <div
-                                class="absolute bg-white w-[50%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
-                                <h3 class="font-extrabold"> AWESOME T-SHIRTS, CROP TOPS AND MORE...</h3>
+                                class="absolute bg-white w-[50%] max-lg:w-[60%] max-md:w-[90%] bottom-5 left-1/2 transform -translate-x-1/2 p-5 block text-center justify-center items-center">
+                                <h3 class="font-extrabold max-lg:text-[13px]"> AWESOME T-SHIRTS, CROP TOPS AND MORE...</h3>
                                 <button
                                     class=" border border-black hover:bg-transparent hover:text-black font-bold   text-white bg-[#000] px-5 py-1 mt-4"
                                     type="button">VIEW COLLECTION</button>
@@ -955,7 +1112,7 @@
                             <div class="mt-5">
                                 <div class="grid grid-cols-3 gap-7  ">
                                     <div class="">
-                                        <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/1.png"
+                                        <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[140px]"><img src="./media/1.png"
                                                 alt=""> </div>
                                         <div class="block justify-center text-center items-center mt-3">
                                             <h4 class="font-bold text-base hover:text-red-400">7 Easy Rules to Write
@@ -965,7 +1122,7 @@
                                         </div>
                                     </div>
                                     <div class="">
-                                        <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/2.png"
+                                        <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[140px]"><img src="./media/2.png"
                                                 alt=""> </div>
                                         <div class="block justify-center text-center items-center mt-3">
                                             <h4 class="font-bold text-base hover:text-red-400">Women Wear that’ll have
@@ -975,7 +1132,7 @@
                                         </div>
                                     </div>
                                     <div class="">
-                                        <div class="bg-cover overflow-hidden  h-[200px]"><img src="./media/3.png"
+                                        <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[140px]"><img src="./media/3.png"
                                                 alt=""> </div>
                                         <div class="block justify-center text-center items-center mt-3">
                                             <h4 class="font-bold text-base hover:text-red-400">Our development is your

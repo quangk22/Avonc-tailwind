@@ -1,5 +1,6 @@
 // Lấy tham chiếu đến các phần tử DOM cần thiết
 const showSearchButton = document.getElementById('showSearchButton');
+const showSearchButton2 = document.getElementById('showSearchButton2');
 const searchContainer = document.getElementById('searchContainer');
 const overlay = document.getElementById('overlay');
 const overlayCart = document.getElementById('overlayCart');
@@ -11,6 +12,11 @@ const showCart = document.getElementById('showCart');
 const cartContainer = document.getElementById('cardContainer');
 // Khi nút "Hiển thị ô tìm kiếm" được nhấp vào
 showSearchButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // Ngăn chặn sự kiện click từ việc lan truyền lên cấp cao hơn
+    searchContainer.classList.toggle('hidden'); // Sử dụng toggle để thay đổi trạng thái ẩn/hiển thị
+    searchContainer.style.transform = 'translateY(0)';
+});
+showSearchButton2.addEventListener('click', (e) => {
     e.stopPropagation(); // Ngăn chặn sự kiện click từ việc lan truyền lên cấp cao hơn
     searchContainer.classList.toggle('hidden'); // Sử dụng toggle để thay đổi trạng thái ẩn/hiển thị
     searchContainer.style.transform = 'translateY(0)';
