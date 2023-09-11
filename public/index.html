@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="../public/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    
+
+
+
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,600;1,100&display=swap');
 </style>
+
 <body>
     <div class="relative max-h-full top-0 h ">
         <!-- search -->
-        <div class="w-full h-[212px] fixed bg-white z-50 hidden   -translate-y-[100%] " id="searchContainer">
+        <div class="w-full h-[160px] fixed bg-white z-50 hidden   -translate-y-[100%] " id="searchContainer">
             <div class="flex justify-end mr-5 mt-2 ">
                 <button id="close" class="text-xs text-[#9ca3af]">
                     <i class="fa-solid fa-x"></i>
@@ -44,9 +47,9 @@
             <div class="h-[100vh] bg-gray-950 bg-opacity-50" id="overlay"></div>
         </div>
         <!-- cart -->
-        <div class=" max-w-full w-[100%] fixed right-0 z-50  hidden  " id="cardContainer">
-            <div class="flex">
-                <div class=" w-[75vw] h-[100vh] bg-gray-950 bg-opacity-50" id="overlayCart"></div>
+        <div class=" max-w-full  fixed right-0 z-50  hidden  h-full " id="cardContainer">
+            <div class="flex w-full">
+                <div class=" w-[77vw] h-[100vh] bg-gray-950 bg-opacity-50" id="overlayCart"></div>
                 <div class="w-[25vw] h-[100vh] bg-white">
                     <div class="flex justify-between p-5 ">
                         <h4 class="font-bold">YOUR CART (0)</h4>
@@ -64,19 +67,83 @@
                 </div>
             </div>
         </div>
+        <!-- detail -->
+        <div class="absolute top-24 left-1/2 -translate-x-1/2 bg-white max-w-[800px] border p-5 hidden">
+            <div class="flex justify-end"><i class='bx bx-x'></i></div>
+            <div class=" w-full grid grid-cols-2 ">
+                <div class="block justify-center text-center px-5">
+                    <div class="">
+                        <img src="./media/8_450x.png" alt="">
+                    </div>
+                    <div class="bg-[#000] text-white py-1 uppercase font-bold text-xs">
+                        <a href="">view more detalis</a>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="vendor mb0 text-xs text-[#444]" >Croock</p>
+                    <h2 class="text-xl font-semibold text-[#444444]">Innerbloom Puffer Jacket</h2>
+                    <div class="text-[#76bd1c] text-xs text-left py-2">In Stock</div>
+                    <div class="flex ">
+                        <div class="text-[#ffbe00] text-xs mr-1"><i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="text-[#444444] text-xs">16 reviews</div>
+                    </div>
+                    <p class="py-3 ">
+                        <span class="text-[#f77575] text-2xl">$780.00</span>
+                        <s class="text-[#444]">$1,193.00</s>
+                    </p>
+                    <div class="">
+                        <ul class="text-[#444444] text-sm ml-5 mb-3">
+                            <li>High-neck style,Drop shoulders</li>
+                            <li>Fabric is very stretchy</li>
+                            <li>Asymmetrical hem</li>
+                            <li>85% Cotton, 15% Polyester</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        COLOR:
+                        <b>BLACK</b>
+                    </div>
+                    <div class="flex bg-cover overflow-hidden mt-2 mb-5">
+                        <div class="w-[50px] h-[50px] pr-1 "><img src="media/8_red.png" alt="" class=""></div>
+                        <div class="w-[50px] h-[50px] pr-1 "><img src="media/888.png" alt="" class=""></div>
+                        <div class="w-[50px] h-[50px] pr-1 "><img src="media/888_black.png   " alt="" class=""></div>
+                    </div>
+                    <div class="block">
+                        <span>Size <b>S</b></span>
+                        <div class="flex mt-2 mb-5">
+                            <div class="mr-2 w-10 h-10 bg-black text-white flex justify-center text-center items-center">S</div>
+                            <div class="mr-2 w-10 h-10 bg-black text-white flex justify-center text-center items-center">M</div>
+                            <div class="mr-2 w-10 h-10 bg-black text-white flex justify-center text-center items-center">L</div>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="mr-2"><input type="number" placeholder="1" class="border w-16 cursor-pointer p-2"></div>
+                        <div class="w-full ">
+                            <div  class=" hover:bg-[#000] hover:text-white border cursor-pointer py-2  uppercase flex justify-center text-center ">add to cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- main -->
-        <div class="container-full ">
-            <header >
+        <div class=" w-[100%] z-40 absolute ">
+            <header class="z-10 w-full">
                 <div class="fixed top-0 z-10 bg-white w-full shadow-md ">
-                    <div class="flex  justify-between max-w-[1200px] m-auto relative">
-                        <div class="logo flex  items-center">
+                    <div class="flex  justify-between max-w-[1200px] m-auto relative px-5">
+                        <div class="logo flex  items-center w-[100px] h-auto">
                             <a href="index.html"><img src="./media/logo.png" alt=""></a>
                         </div>
                         <div class="menu flex items-center text-center uppercase">
                             <ul class="flex text-sm font-normal  ">
                                 <li class=" p-5  group ">
                                     <a href="" class="hover:text-[#f57480] relative">Home</a>
-                                    <div class=" absolute bg-white w-full top-[100%] left-0 border hidden  group-hover:block">
+                                    <div
+                                        class=" absolute bg-white w-[60%] top-[100%] left-[12%] translate-x-[70px] border hidden  group-hover:block">
                                         <div class="block ">
                                             <div class="w-full grid grid-cols-4 mt-5 px-5">
                                                 <!-- 1 -->
@@ -412,7 +479,7 @@
                                 <li class=" p-5  hover:text-[#f57480]"><a href="">Buy Now!</a></li>
                             </ul>
                         </div>
-                        <div class="icon flex items-center text-center text-2xl">
+                        <div class="icon flex items-center text-center text-xl">
                             <button id="showSearchButton"><i class='bx bx-search mr-4 cursor-pointer'></i></button>
                             <!-- user -->
                             <button id="showUser" class="relative">
@@ -490,12 +557,13 @@
 
                 </div>
             </header>
-            <div class="banner mt-[61px]">
+            <div class="banner mt-[61px] w-full h-[70%]">
                 <section>
                     <div class="  ">
                         <div class="banner w-full relative">
                             <div class="img-banner w-full  h-full "><img src="./media/baner1.png" alt=""></div>
-                            <div class="text-item absolute left-1/4 top-1/2 transform -translate-x-1/4 -translate-y-1/2">
+                            <div
+                                class="text-item absolute left-1/4 top-1/2 transform -translate-x-1/4 -translate-y-1/2 ">
 
                                 <p class="flex text-center justify-center leading-[19.2px] text-base font-normal">START
                                     A
@@ -520,10 +588,8 @@
                     </div>
                 </section>
             </div>
-            <main class="mt-[60px] ">
-
-
-                <section class=" mt-5 max-w-[1200px] m-auto ">
+            <main class="mt-[60px] w-full max-w-[1200px] m-auto px-5">
+                <section class=" mt-5  ">
                     <div class="grid gap-5 grid-cols-2 " style="grid-template-rows: 1fr 189px 1fr;">
                         <div class="img-item1  relative row-span-2 group">
                             <div class=" bg-cover overflow-hidden  "> <img src="media/womens-top_770x.png" alt=""
@@ -609,225 +675,234 @@
                         <!-- 4 -->
                     </div>
                 </section>
-                <section class="mt-12 max-w-[1200px] m-auto ">
+                <section class="mt-12  ">
                     <div class="flex text-center justify-center items-center mb-16">
                         <div class="">
                             <h2 class="font-bold text-2xl"><b>NEW ARRIVALS</b></h2>
                             <p>Shop our new arrivals from established brands</p>
                         </div>
                     </div>
-                    <div class="list grid grid-cols-4 gap-5  ">
-                        <div class="card group">
-                            <div class="img1 relative -z-30 overflow-hidden">
-                                <img src="./media/8_450x.png" alt="" class="h-[400px]">
-                                <div
-                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                                    <div class="flex">
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
-                                            <i class='bx bx-heart'></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-cart-alt'></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-search-alt-2'></i>
+                    <div class="flex justify-center text-center items-center relative ">
+                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute left-[-30px] rounded-full   hover:bg-gray-400 cursor-pointer "
+                            id="prev">
+                            <i class='bx bx-chevron-left'></i>
+                        </div>
+                        <div class="list flex " id="slide">
+                            <!-- 1 -->
+                            <div class="card group px-2 object-cover">
+                                <div class="img1 relative -z-30 overflow-hidden">
+                                    <img src="./media/8_450x.png" alt="" class="h-[400px]">
+                                    <div
+                                        class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                        <div class="flex">
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
+                                                <i class='bx bx-heart'></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-cart-alt'></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-search-alt-2'></i>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="flex justify-center text-center">
+                                    <div class="block ">
+                                        <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a
+                                                href="">Innerbloom
+                                                Puffer
+                                                Jacket</a></div>
+                                        <div class="flex justify-center">
+                                            <s class="mr-1 font-normal opacity-60">$1,178.00</s>
+                                            <span class="text-sm text-red-400">$761.00</span>
+                                        </div>
+                                        <div class="icon text-[#ffbe00]">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star-half'></i>
+                                        </div>
+                                        <div class="">
+                                            <ul class="flex text-center justify-center">
+                                                <li
+                                                    class="bg-red-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                                <li
+                                                    class="bg-blue-600 rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                                <li
+                                                    class="bg-black    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="flex justify-center text-center">
-                                <div class="block ">
-                                    <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Innerbloom
-                                            Puffer
-                                            Jacket</a></div>
-                                    <div class="flex justify-center">
-                                        <s class="mr-1 font-normal opacity-60">$1,178.00</s>
-                                        <span class="text-sm text-red-400">$761.00</span>
-                                    </div>
-                                    <div class="icon text-[#ffbe00]">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-                                    <div class="">
-                                        <ul class="flex text-center justify-center">
-                                            <li
-                                                class="bg-red-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                            <li
-                                                class="bg-blue-600 rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                            <li
-                                                class="bg-black    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 cursor-pointer hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                        </ul>
+                            <!-- 2 -->
+                            <div class="card group px-2 object-cover">
+                                <div class="img relative -z-30 overflow-hidden">
+                                    <img src="./media/23_400x.jpg" alt="" class="h-[400px]">
+                                    <div
+                                        class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                        <div class="flex">
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
+                                                <i class='bx bx-heart   '></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-cart-alt'></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-search-alt-2'></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="flex justify-center text-center ">
+                                    <div class="block ">
+                                        <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Martha
+                                                Knit
+                                                Top</a></div>
+                                        <div class="flex justify-center">
+                                            <span class="font-normal"> $471.00</span>
+                                        </div>
+                                        <div class="icon text-[#ffbe00]">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star-half'></i>
+                                        </div>
+                                        <div class="">
+                                            <ul class="flex text-center justify-center">
+                                                <li
+                                                    class="bg-green-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                                <li
+                                                    class="bg-black rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                                <li
+                                                    class="bg-pink-400    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
 
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="card group px-2 object-cover">
+                                <div class="img relative -z-30 overflow-hidden">
+                                    <img src="./media/photo1.png" alt="" class="h-[400px]">
+                                    <div
+                                        class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                        <div class="flex">
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
+                                                <i class='bx bx-heart   '></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-cart-alt'></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-search-alt-2'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center text-center">
+                                    <div class="block ">
+                                        <div class="font-medium  text-sm mt-4 mb-1  "><a href="">Button Up Top Black</a>
+                                        </div>
+                                        <div class="flex justify-center">
+                                            <span class="font-normal"> $1,256.00</span>
+                                        </div>
+                                        <div class="icon text-[#ffbe00]">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star-half'></i>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="card group px-2 object-cover ">
+                                <div class="img relative -z-30 overflow-hidden">
+                                    <img src="./media/BLACK_400x.png" alt="" class="h-[400px] ">
+                                    <div
+                                        class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
+                                        <div class="flex">
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
+                                                <i class='bx bx-heart   '></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-cart-alt'></i>
+                                            </div>
+                                            <div
+                                                class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
+                                                <i class='bx bx-search-alt-2'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center text-center z-60">
+                                    <div class="block ">
+                                        <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400 "><a
+                                                href="">Backpack
+                                                With
+                                                Contrast Bow</a></div>
+                                        <div class="flex justify-center">
+                                            <span class="font-normal"> $110.00</span>
+                                        </div>
+                                        <div class="icon text-[#ffbe00]">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star-half'></i>
+                                        </div>
+                                        <div class="">
+                                            <ul class="flex text-center justify-center">
+                                                <li
+                                                    class="bg-gray-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                                <li
+                                                    class="bg-black  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black ">
+                                                </li>
+                                                <li
+                                                    class=" bg-pink-400  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                        <!-- 2 -->
-                        <div class="card group">
-                            <div class="img relative -z-30 overflow-hidden">
-                                <img src="./media/23_400x.jpg" alt="" class="h-[400px]">
-                                <div
-                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                                    <div class="flex">
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
-                                            <i class='bx bx-heart   '></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-cart-alt'></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-search-alt-2'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-center text-center ">
-                                <div class="block ">
-                                    <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400"><a href="">Martha
-                                            Knit
-                                            Top</a></div>
-                                    <div class="flex justify-center">
-                                        <span class="font-normal"> $471.00</span>
-                                    </div>
-                                    <div class="icon text-[#ffbe00]">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-                                    <div class="">
-                                        <ul class="flex text-center justify-center">
-                                            <li
-                                                class="bg-green-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                            <li
-                                                class="bg-black rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                            <li
-                                                class="bg-pink-400    rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
+                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute right-[-30px] rounded-full   hover:bg-gray-400 cursor-pointer"
+                            id="next">
+                            <i class='bx bx-chevron-right'></i>
                         </div>
-                        <!-- 3 -->
-                        <div class="card group">
-                            <div class="img relative -z-30 overflow-hidden">
-                                <img src="./media/photo1.png" alt="" class="h-[400px]">
-                                <div
-                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                                    <div class="flex">
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
-                                            <i class='bx bx-heart   '></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-cart-alt'></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-search-alt-2'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-center text-center">
-                                <div class="block ">
-                                    <div class="font-medium  text-sm mt-4 mb-1  "><a href="">Button Up Top Black</a>
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span class="font-normal"> $1,256.00</span>
-                                    </div>
-                                    <div class="icon text-[#ffbe00]">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- 4 -->
-                        <div class="card group  ">
-                            <div class="img relative -z-30 overflow-hidden">
-                                <img src="./media/BLACK_400x.png" alt="" class="h-[400px] ">
-                                <div
-                                    class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2  transition-all duration-300 ease-out group-hover:-translate-y-10 opacity-0 group-hover:opacity-100 ">
-                                    <div class="flex">
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1  ">
-                                            <i class='bx bx-heart   '></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-cart-alt'></i>
-                                        </div>
-                                        <div
-                                            class="w-9 h-9 bg-black text-white flex text-center justify-center items-center rounded-md m-1 ">
-                                            <i class='bx bx-search-alt-2'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-center text-center z-60">
-                                <div class="block ">
-                                    <div class="font-medium  text-sm mt-4 mb-1 hover:text-red-400 "><a href="">Backpack
-                                            With
-                                            Contrast Bow</a></div>
-                                    <div class="flex justify-center">
-                                        <span class="font-normal"> $110.00</span>
-                                    </div>
-                                    <div class="icon text-[#ffbe00]">
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star'></i>
-                                        <i class='bx bxs-star-half'></i>
-                                    </div>
-                                    <div class="">
-                                        <ul class="flex text-center justify-center">
-                                            <li
-                                                class="bg-gray-600  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                            <li
-                                                class="bg-black  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black ">
-                                            </li>
-                                            <li
-                                                class=" bg-pink-400  rounded-full w-4 h-4 m-1 shadow-[#ddd] border-2 hover:scale-125 hover:border-2 hover:border-black">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
                     </div>
-
                 </section>
-                <section class=" mt-20 max-w-[1200px] m-auto">
+                <section class=" mt-20 ">
                     <div class="grid grid-cols-2 gap-5">
                         <div class="relative group">
                             <div class="overflow-hidden">
@@ -857,7 +932,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="mt-12 mb-12 max-w-[1200px] m-auto">
+                <section class="mt-12 mb-12 ">
                     <div class="grid grid-cols-5 gap-16 ml-10">
                         <img src="./media/5_0c0397a5-2ba0-4637-a9f6-86e68b3d6289_200x.avif" alt="">
                         <img src="./media/1_6bea7f1e-dc0a-446d-9714-c15ac0eaab06_200x.avif" alt="">
@@ -867,7 +942,6 @@
                     </div>
 
                 </section>
-
             </main>
             <!-- main -->
             <footer class="bg-[#fafafa]">

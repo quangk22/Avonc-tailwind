@@ -56,3 +56,14 @@ document.addEventListener('click', () => {
 userContainer.addEventListener('click', (e) => {
     e.stopPropagation();
 });
+
+
+
+document.getElementById('next').onclick = function(){
+    let lists = document.querySelectorAll('.card');
+    document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+    let lists = document.querySelectorAll('.card');
+    document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
