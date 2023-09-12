@@ -746,7 +746,7 @@
             </div>
             <!--  -->
             <main class="mt-[60px] w-full max-w-[1200px] m-auto px-5">
-                <section class=" mt-5  ">
+                <section class=" mt-5 max-md:hidden ">
                     <div class="grid-item" >
                         <div class="img-item1  relative  group">
                             <div class=" bg-cover object-cover overflow-hidden  "> <img src="media/womens-top_770x.png" alt=""
@@ -840,7 +840,7 @@
                         </div>
                     </div>
                     <div class="flex justify-center text-center items-center relative ">
-                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute left-[-30px] rounded-full   hover:bg-gray-400 cursor-pointer max-lg:-left-[5px] max-lg:bg-white"
+                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute left-[-10px] rounded-full   hover:bg-gray-400 cursor-pointer max-lg:-left-[5px] max-lg:bg-white"
                             id="prev">
                             <i class='bx bx-chevron-left'></i>
                         </div>
@@ -1053,7 +1053,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute right-[-30px]  rounded-full   hover:bg-gray-400 cursor-pointer max-lg:-right-[5px] max-lg:bg-white"
+                        <div class="flex justify-center text-center items-center text-3xl w-7 h-7 absolute right-[-10px]  rounded-full   hover:bg-gray-400 cursor-pointer max-lg:-right-[5px] max-lg:bg-white"
                             id="next">
                             <i class='bx bx-chevron-right'></i>
                         </div>
@@ -1110,10 +1110,10 @@
                                 <p class="text-base">You are going to love this amazing shopify theme.</p>
                             </div>
                             <div class="mt-5">
-                                <div class="grid grid-cols-3 gap-7  ">
-                                    <div class="">
-                                        <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[140px]"><img src="./media/1.png"
-                                                alt=""> </div>
+                                <div class="grid grid-cols-3 gap-7 max-lg:grid-cols-2 max-md:grid-cols-1 px-5">
+                                    <div class="    ">
+                                        <div class=" object-cover overflow-hidden  h-[200px] max-lg:h-[200px] max-md:h-[350px]"><img src="./media/1.png"
+                                                alt="" class="w-full "> </div>
                                         <div class="block justify-center text-center items-center mt-3">
                                             <h4 class="font-bold text-base hover:text-red-400">7 Easy Rules to Write
                                                 Product
@@ -1121,8 +1121,8 @@
                                             <span class="text-xs text-[#7c7c7c]">July 16, 2022</span>
                                         </div>
                                     </div>
-                                    <div class="">
-                                        <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[140px]"><img src="./media/2.png"
+                                    <div class="max-md:hidden">
+                                        <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[200px]"><img src="./media/2.png"
                                                 alt=""> </div>
                                         <div class="block justify-center text-center items-center mt-3">
                                             <h4 class="font-bold text-base hover:text-red-400">Women Wear that’ll have
@@ -1131,7 +1131,7 @@
                                             <span class="text-xs text-[#7c7c7c]">June 26, 2022</span>
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div class="max-lg:hidden">
                                         <div class="bg-cover object-cover overflow-hidden  h-[200px] max-lg:h-[140px]"><img src="./media/3.png"
                                                 alt=""> </div>
                                         <div class="block justify-center text-center items-center mt-3">
@@ -1155,7 +1155,7 @@
 
                 </section>
                 <section class="bg-black mt-20">
-                    <div class="max-w-[1200px] m-auto flex  justify-between py-5 ">
+                    <div class="max-w-[1200px] m-auto grid  grid-cols-3 gap-55 max-lg:grid-cols-2 max-lg:gap-4 max-md:grid-cols-none max-md:grid-rows-3 max-md:gap-4 p-5 ">
                         <div class="flex text-white  ">
                             <div class="mt-2 mr-3 text-lg "><i class="fa-solid fa-truck-fast fa-2xl"></i></div>
                             <div class="block">
@@ -1180,7 +1180,7 @@
                     </div>
                 </section>
                 <div class="border-b">
-                    <div class="footer-top max-w-[1200px] mt-8 m-auto grid grid-cols-5 gap-5 ">
+                    <div class="footer-top max-w-[1200px] py-8 px-3 m-auto grid grid-cols-5 gap-5 max-lg:grid-cols-2 ">
                         <div class="nav-menu">
                             <p class="logo mb-5"><img src="./media/logo.png" alt=""></p>
                             <div class="text text-sm">
@@ -1235,8 +1235,8 @@
                             <p class="mb-5 text-sm">Enter your email to receive daily news and get 20% off coupon for
                                 all items.
                             </p>
-                            <form action="">
-                                <input type="email" placeholder="Email address" class="p-2 border border-inherit mb-2">
+                            <form action="" class="block">
+                                <input type="email" placeholder="Email address" class="p-2 border border-inherit mb-2 w-[100%]">
                                 <button
                                     class="bg-[#000000] px-6 py-3 text-white text-xs font-bold"><span>Subscribe</span></button>
                             </form>
