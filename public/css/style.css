@@ -1,7 +1,7 @@
 .grid-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 170px 1fr;
+    grid-template-rows: 1fr 188px 1fr;
     gap: 15px;
 }
 .img-item1 {
@@ -20,7 +20,16 @@
     .grid-item {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 130px 1fr;
+        grid-template-rows: 1fr 160px 1fr;
+        gap: 10px;
+    }
+   
+  }
+  @media screen and (max-width: 1024px) {
+    .grid-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 160px 1fr;
         gap: 10px;
     }
    
